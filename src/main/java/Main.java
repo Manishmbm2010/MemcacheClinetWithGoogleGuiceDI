@@ -13,7 +13,7 @@ public class Main {
     injector.getInstance(ApplicationBootstrap.class);
     MemcacheService memcacheService = injector.getInstance(MemcacheService.class);
 
-    String key = "346375099180776:NET_MINING-zmjjzgjhmtu4m";
+    String key = "Add Memchace key";
     Object object = memcacheService.retrieveValueByKey(key);
     ObjectMapper objectMapper = new ObjectMapper();
     System.out.println(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(object));
