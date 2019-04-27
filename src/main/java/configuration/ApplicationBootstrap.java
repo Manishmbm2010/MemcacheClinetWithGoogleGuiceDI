@@ -13,7 +13,7 @@ public class ApplicationBootstrap {
 
   @Inject
   public ApplicationBootstrap(ApplicationConfiguration applicationConfiguration) throws IOException {
-    String path = "./src/main/resources/config.json";
+    String path = System.getProperty("configFilePath");
     String configString = new String(Files.readAllBytes(Paths.get(path)));
     ObjectMapper objectMapper = new ObjectMapper();
     Map configMap = objectMapper.readValue(configString, Map.class);

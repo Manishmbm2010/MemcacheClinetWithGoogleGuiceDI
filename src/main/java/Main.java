@@ -9,6 +9,7 @@ import memcache.MemcacheService;
 public class Main {
 
   public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
+    System.setProperty("configFilePath","./src/main/resources/config.json");
     Injector injector = Guice.createInjector();
     injector.getInstance(ApplicationBootstrap.class);
     MemcacheService memcacheService = injector.getInstance(MemcacheService.class);
