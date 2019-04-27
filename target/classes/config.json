@@ -1,0 +1,8 @@
+{
+  "repostoryService": {
+    "memcache": {
+      "host": "localhost",
+      "port": 11211
+    }
+  }
+}
